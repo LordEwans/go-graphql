@@ -1,0 +1,19 @@
+type Dog {
+  _id: String!
+  name: String!
+  isGoodBoi: Boolean!
+}
+
+type Query {
+  dog(_id: String!): Dog!
+  dogs: [Dog!]!
+}
+
+type Mutation {
+  createDog(input: NewDog): Dog!
+}
+
+input NewDog {
+  name: String!
+  isGoodBoi: Boolean!
+}
